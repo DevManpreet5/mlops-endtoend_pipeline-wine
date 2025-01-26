@@ -1,5 +1,0 @@
-data_ingestion:
-  dataset_url: "https://github.com/tirthajyoti/Machine-Learning-with-Python/blob/master/Datasets/wine.data.csv"
-  raw_dataset_dir: "artifacts/data/raw"
-  processed_dataset_dir: "artifacts/data/processed"
-  dataset_name: "wine.csv"

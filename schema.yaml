@@ -1,42 +1,16 @@
-columns:
-  - name: "Class"
-    type: "int"
+COLUMNS:
+  fixed acidity: float64
+  volatile acidity: float64
+  citric acid: float64
+  residual sugar: float64
+  chlorides: float64
+  free sulfur dioxide: float64
+  total sulfur dioxide: float64
+  density: float64
+  pH: float64
+  sulphates: float64
+  alcohol: float64
+  quality: int64
 
-  - name: "Alcohol"
-    type: "float"
-
-  - name: "Malic acid"
-    type: "float"
-
-  - name: "Ash"
-    type: "float"
-
-  - name: "Alcalinity of ash"
-    type: "float"
-
-  - name: "Magnesium"
-    type: "int"
-
-  - name: "Total phenols"
-    type: "float"
-
-  - name: "Flavanoids"
-    type: "float"
-
-  - name: "Nonflavanoid phenols"
-    type: "float"
-
-  - name: "Proanthocyanins"
-    type: "float"
-
-  - name: "Color intensity"
-    type: "float"
-
-  - name: "Hue"
-    type: "float"
-
-  - name: "OD280/OD315 of diluted wines"
-    type: "float"
-
-  - name: "Proline"
-    type: "int"
+TARGET_COLUMN:
+  name: quality
