@@ -1,5 +1,17 @@
 import yaml
-from src.datascience.entity.config_entity import Ingestionclassconfig
+#from src.datascience.entity.config_entity import Ingestionclassconfig
+#cant fix the import error 
+
+from dataclasses import dataclass
+
+@dataclass
+class Ingestionclassconfig:
+    dataset_url: str
+    raw_dataset_dir: str
+    processed_dataset_dir: str
+    dataset_name: str
+    test_size: int
+    random_state: int
 
 class configmanager:
     def __init__(self,config_path='config/config.yaml',param_path='params.yaml'):
