@@ -10,7 +10,8 @@ data_ingestion:
 data_transformation:
   dataset_path: "artifacts/data/processed"
   output_dir: "artifacts/data/transformed"
-  file_name: "wine.csv"
+  file_name_train: "train.csv"
+  file_name_test: "test.csv"
   features_to_scale:
     - "Alcohol"
     - "Malic acid"

@@ -8,15 +8,20 @@ class Datatransform:
         self.config = config
 
     def scale_fxn(self):
-        filepath=os.path.join(self.config.dataset_path,self.config.file_name)
-        df=pd.read_csv(filepath)
+        filepath_train=os.path.join(self.config.dataset_path,self.config.file_name_train)
+        df_train=pd.read_csv(filepath_train)
+
+        filepath_test=os.path.join(self.config.dataset_path,self.config.file_name_test)
+        df_test=pd.read_csv(filepath_test)
+
         scaler = StandardScaler()
-        df[self.config.features_to_scale] = scaler.fit_transform(df[self.config.features_to_scale])
-        return df
+        df_train[self.config.features_to_scale] = scaler.fit_transform(df_train[self.config.features_to_scale])
+        df_test[self.config.features_to_scale] = scaler.transform(df_test[self.config.features_to_scale])
+        return df_train , df_test
 
 
     def run(self):
-         df = self.scale_fxn()
+         df_train,df_test = self.scale_fxn()
          print('transformed')
-         return df
+         return df_train,df_test
        

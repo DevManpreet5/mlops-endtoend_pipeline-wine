@@ -14,5 +14,6 @@ class Ingestionclassconfig:
 class TransformationConfig:
     dataset_path: str
     output_dir: str
-    file_name: str
+    file_name_train: str
+    file_name_test: str
     features_to_scale: List[str]
