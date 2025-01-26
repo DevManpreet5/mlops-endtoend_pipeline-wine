@@ -18,10 +18,18 @@ class Datatransform:
         df_train[self.config.features_to_scale] = scaler.fit_transform(df_train[self.config.features_to_scale])
         df_test[self.config.features_to_scale] = scaler.transform(df_test[self.config.features_to_scale])
         return df_train , df_test
+    
+    def save_datset(self):
+        df_train,df_test=self.scale_fxn()
+        filepath_train=os.path.join(self.config.output_dir,self.config.file_name_train)
+        df_train.to_csv(filepath_train)
 
+        filepath_test=os.path.join(self.config.output_dir,self.config.file_name_test)
+        df_test.to_csv(filepath_test)
+        return df_train,df_test
 
     def run(self):
-         df_train,df_test = self.scale_fxn()
-         print('transformed')
+         df_train,df_test = self.save_datset()
+         print('saved transformed')
          return df_train,df_test
        
