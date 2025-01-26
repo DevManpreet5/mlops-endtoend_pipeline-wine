@@ -23,6 +23,7 @@
 
 1. Verify PYTHONPATH
    Ensure that the root of your project (where src exists) is in the Python path. To check, run:
+
    python3 -c "import sys; print(sys.path)"
 
 2. If the root directory (.../mlops_wine_end2end_pipeline) is not listed, explicitly set it:
