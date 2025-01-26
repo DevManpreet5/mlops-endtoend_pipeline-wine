@@ -1,7 +1,7 @@
 from src.config.configuration import configmanager
 from src.components.datatransform import Datatransform
 
-class DataIngestionPipeline:
+class DataTransformPipeline:
     def __init__(self):
         self.config_manager = configmanager()
 
