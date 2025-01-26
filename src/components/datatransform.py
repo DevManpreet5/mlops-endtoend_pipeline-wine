@@ -23,10 +23,10 @@ class Datatransform:
         df_train,df_test=self.scale_fxn()
         os.makedirs(self.config.output_dir,exist_ok=True)
         filepath_train=os.path.join(self.config.output_dir,self.config.file_name_train)
-        df_train.to_csv(filepath_train)
+        df_train.to_csv(filepath_train,index=False)
 
         filepath_test=os.path.join(self.config.output_dir,self.config.file_name_test)
-        df_test.to_csv(filepath_test)
+        df_test.to_csv(filepath_test,index=False)
         return df_train,df_test
 
     def run(self):
