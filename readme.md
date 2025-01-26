@@ -27,6 +27,7 @@
    python3 -c "import sys; print(sys.path)"
 
 2. If the root directory (.../mlops_wine_end2end_pipeline) is not listed, explicitly set it:
+
    export PYTHONPATH=$(pwd)
 
 3. python3 src/config/configuration.py
