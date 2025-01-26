@@ -1,5 +1,5 @@
 import yaml
-from entity.config_entity import Ingestionclassconfig
+from src.datascience.entity.config_entity import Ingestionclassconfig
 
 class configmanager:
     def __init__(self,config_path='config/config.yaml',param_path='params.yaml'):
