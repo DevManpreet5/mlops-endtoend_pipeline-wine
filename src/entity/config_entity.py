@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import List
 
 @dataclass
 class Ingestionclassconfig:
@@ -8,3 +9,10 @@ class Ingestionclassconfig:
     dataset_name: str
     test_size: int
     random_state: int
+
+@dataclass
+class TransformationConfig:
+    dataset_path: str
+    output_dir: str
+    file_name: str
+    features_to_scale: List[str]

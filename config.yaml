@@ -3,3 +3,23 @@ data_ingestion:
   raw_dataset_dir: "artifacts/data/raw"
   processed_dataset_dir: "artifacts/data/processed"
   dataset_name: "wine.csv"
+
+## data validation
+
+## data transformation
+data_transformation:
+  dataset_path: "artifacts/data/processed"
+  output_dir: "artifacts/data/transformed"
+  file_name: "wine.csv"
+  features_to_scale:
+    - "Alcohol"
+    - "Malic acid"
+    - "Ash"
+    - "Alcalinity of ash"
+    - "Total phenols"
+    - "Flavanoids"
+    - "Nonflavanoid phenols"
+    - "Proanthocyanins"
+    - "Color intensity"
+    - "Hue"
+    - "OD280/OD315 of diluted wines"
