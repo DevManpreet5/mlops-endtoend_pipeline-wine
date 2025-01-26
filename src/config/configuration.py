@@ -1,5 +1,5 @@
 import yaml
-from src.entity.config_entity import Ingestionclassconfig
+from src.entity.config_entity import Ingestionclassconfig , TransformationConfig
 
 
 class configmanager:
@@ -23,6 +23,16 @@ class configmanager:
             test_size=params["test_size"],
             random_state=params["random_state"],
         )
+    
+    def get_data_transform_config(self):
+        config = self.config["data_transformation"]
+        return TransformationConfig(
+            dataset_path=config["dataset_path"],
+            output_dir=config["output_dir"],
+            file_name=config["file_name"],
+            features_to_scale=config["features_to_scale"],
+        )
+
         
     def printvals(self):
         print(self.config,self.params)
