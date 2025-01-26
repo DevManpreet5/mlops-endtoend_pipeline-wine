@@ -27,3 +27,6 @@ data_transformation:
 
 model_training:
   model: "AdaBoostRegressor"
+  learning_rate: 1
+  loss: "linear"
+  n_estimators: 100
