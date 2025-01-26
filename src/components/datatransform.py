@@ -8,7 +8,7 @@ class Datatransform:
         self.config = config
 
     def scale_fxn(self):
-        filepath=os.path.join(TransformationConfig.dataset_path,TransformationConfig.file_name)
+        filepath=os.path.join(self.config.dataset_path,self.config.file_name)
         df=pd.read_csv(filepath)
         scaler = StandardScaler()
         df[self.config.features_to_scale] = scaler.fit_transform(df[self.config.features_to_scale])
@@ -16,7 +16,7 @@ class Datatransform:
 
 
     def run(self):
-         df = self.scale_features(df)
+         df = self.scale_fxn()
          print('transformed')
          return df
        
