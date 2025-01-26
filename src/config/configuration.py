@@ -1,5 +1,5 @@
 import yaml
-from src.entity.config_entity import Ingestionclassconfig , TransformationConfig
+from src.entity.config_entity import Ingestionclassconfig , TransformationConfig ,  Modeltraining
 
 
 class configmanager:
@@ -33,7 +33,26 @@ class configmanager:
             file_name_test=config["file_name_test"],
             features_to_scale=config["features_to_scale"],
         )
+    
+    def get_data_transform_config(self):
+        config = self.config["model_training"]
+        params=self.params["model_training"]
+        return Modeltraining(
+            model= config["model"],
+            dataset_path=config["dataset_path"],
+            file_name_train=config["file_name_train"],
+            file_name_test=config["file_name_test"],
+            model_path=config["model_path"],
+            model_name=config["model_name"],
+            base_estimator=config["base_estimator"],
+            max_depth=config["max_depth"],
+            random_state=config["max_depth"],
+            learning_rate=params["learning_rate"],
+            loss=params["loss"],
+            n_estimators=params["n_estimators"]
+        )
 
+    
         
     def printvals(self):
         print(self.config,self.params)
