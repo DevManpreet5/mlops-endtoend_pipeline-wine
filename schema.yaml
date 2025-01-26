@@ -1,0 +1,42 @@
+columns:
+  - name: "Class"
+    type: "int"
+
+  - name: "Alcohol"
+    type: "float"
+
+  - name: "Malic acid"
+    type: "float"
+
+  - name: "Ash"
+    type: "float"
+
+  - name: "Alcalinity of ash"
+    type: "float"
+
+  - name: "Magnesium"
+    type: "int"
+
+  - name: "Total phenols"
+    type: "float"
+
+  - name: "Flavanoids"
+    type: "float"
+
+  - name: "Nonflavanoid phenols"
+    type: "float"
+
+  - name: "Proanthocyanins"
+    type: "float"
+
+  - name: "Color intensity"
+    type: "float"
+
+  - name: "Hue"
+    type: "float"
+
+  - name: "OD280/OD315 of diluted wines"
+    type: "float"
+
+  - name: "Proline"
+    type: "int"
