@@ -17,3 +17,18 @@ class TransformationConfig:
     file_name_train: str
     file_name_test: str
     features_to_scale: List[str]
+
+@dataclass
+class Modeltraining:
+    model: str
+    dataset_path: str
+    file_name_train: str
+    file_name_test: str
+    model_path: str
+    model_name: str
+    base_estimator: str
+    max_depth: int
+    random_state: int
+    learning_rate: int
+    loss: str
+    n_estimators: int
