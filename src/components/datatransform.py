@@ -21,6 +21,7 @@ class Datatransform:
     
     def save_datset(self):
         df_train,df_test=self.scale_fxn()
+        os.makedirs(self.config.output_dir,exist_ok=True)
         filepath_train=os.path.join(self.config.output_dir,self.config.file_name_train)
         df_train.to_csv(filepath_train)
 

@@ -29,7 +29,8 @@ class configmanager:
         return TransformationConfig(
             dataset_path=config["dataset_path"],
             output_dir=config["output_dir"],
-            file_name=config["file_name"],
+            file_name_train=config["file_name_train"],
+            file_name_test=config["file_name_test"],
             features_to_scale=config["features_to_scale"],
         )
 
