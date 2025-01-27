@@ -1,5 +1,5 @@
 import yaml
-from src.entity.config_entity import Ingestionclassconfig , TransformationConfig ,  Modeltraining
+from src.entity.config_entity import Ingestionclassconfig , TransformationConfig ,  Modeltraining ,modelevaluating
 
 
 class configmanager:

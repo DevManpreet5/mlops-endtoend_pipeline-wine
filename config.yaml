@@ -42,4 +42,4 @@ model_evaluating:
   model_path: "artifacts/model"
   model_name: "AdaBoostRegressor.pkl"
   metrics_file: "metrics.json"
-  tracking-uri: "https://dagshub.com/DevManpreet5/end_end_ML_pipeline.mlflow"
+  tracking_uri: "https://dagshub.com/DevManpreet5/end_end_ML_pipeline.mlflow"

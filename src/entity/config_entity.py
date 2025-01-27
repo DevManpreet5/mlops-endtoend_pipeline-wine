@@ -33,3 +33,11 @@ class Modeltraining:
     loss: str
     n_estimators: int
     hyperparameter_file: str
+
+@dataclass
+class modelevaluating:
+  test_dir: str
+  model_path: str
+  model_name: str
+  metrics_file: str
+  tracking_uri: str
