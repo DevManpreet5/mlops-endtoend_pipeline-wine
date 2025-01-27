@@ -12,7 +12,7 @@ load_dotenv()
 class Modeltestingcomponent:
     def __init__(self, config: Modelevaluating):
         self.config = config
-        mlflow_tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+        mlflow_tracking_uri = self.config.tracking_uri
         mlflow_tracking_username = os.getenv("MLFLOW_TRACKING_USERNAME")
         mlflow_tracking_password = os.getenv("MLFLOW_TRACKING_PASSWORD")
         os.environ['MLFLOW_TRACKING_URI'] = mlflow_tracking_uri
@@ -26,7 +26,7 @@ class Modeltestingcomponent:
         y=data['Class']
 
         mlflow.set_tracking_uri(self.config.tracking_uri)
-        mlflow.set_experiment("evaluating model")
+        mlflow.set_experiment("evaluating wine model")
 
 
         with mlflow.start_run():
