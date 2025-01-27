@@ -51,7 +51,7 @@ class Modeltestingcomponent:
                 "r2_score": r2score,
                 "mae": mae,
                 "mse":mse,
-                "confusion_matrix": cm,
+                "confusion_matrix": cm.tolist(),
                 "classification_report": cr
             }
             metric_path=os.path.join(self.config.model_path,self.config.metrics_file)
