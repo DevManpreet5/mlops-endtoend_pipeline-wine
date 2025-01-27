@@ -2,6 +2,6 @@ mlflow
 python-dotenv
 joblib
 pandas
-scikit-learn
+scikit-learn==1.3.2
 requests
 dagshub
