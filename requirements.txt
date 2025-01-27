@@ -4,4 +4,4 @@ joblib
 pandas
 scikit-learn
 requests
-dawshub
+dagshub
