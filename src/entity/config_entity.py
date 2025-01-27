@@ -32,3 +32,5 @@ class Modeltraining:
     learning_rate: int
     loss: str
     n_estimators: int
+    metrics_file: str
+    hyperparameter_file: str

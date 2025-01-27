@@ -32,6 +32,8 @@ model_training:
   file_name_test: "test.csv"
   model_path: "artifacts/model"
   model_name: "AdaBoostRegressor.pkl"
+  metrics_file: "metrics.json"
+  hyperparameter_file: "hyperparameter.json"
   base_estimator: "DecisionTreeRegressor"
   max_depth: 3
   random_state: 42

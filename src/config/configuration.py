@@ -49,7 +49,9 @@ class configmanager:
             random_state=config["max_depth"],
             learning_rate=params["learning_rate"],
             loss=params["loss"],
-            n_estimators=params["n_estimators"]
+            n_estimators=params["n_estimators"],
+            metrics_file= config["metrics_file"],
+            hyperparameter_file= config["hyperparameter_file"]
         )
 
     
