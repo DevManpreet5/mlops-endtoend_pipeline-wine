@@ -12,7 +12,7 @@ class ModelTrainingcomponent:
         self.config = config
     
     def modeltrain(self):
-        ada_boost_model = self.config.model(base_estimator=self.config.base_estimator(max_depth=self.config.max_depth), random_state=self.config.random_state)
+        ada_boost_model = AdaBoostRegressor(base_estimator=DecisionTreeRegressor(max_depth=self.config.max_depth), random_state=self.config.random_state)
 
         param_grid = {
         'n_estimators': [50, 100, 200],             
@@ -49,6 +49,7 @@ class ModelTrainingcomponent:
             "Root Mean Squared Error": rmse,
             "R^2 Score": r2
         }
+        os.makedirs(self.config.model_path,exist_ok=True)
         metrics_save_path = os.path.join(self.config.model_path, self.config.metrics_file)
         pd.DataFrame([metrics]).to_json(metrics_save_path, orient="records", indent=4)
 

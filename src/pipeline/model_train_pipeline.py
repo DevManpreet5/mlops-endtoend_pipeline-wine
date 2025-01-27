@@ -6,6 +6,6 @@ class trainingpiepline:
         self.config_manager = configmanager()
 
     def run(self):
-        config = self.config_manager.get_data_transform_config()
+        config = self.config_manager.get_data_training_config()
         data_ingestion = ModelTrainingcomponent(config)
         data_ingestion.run()

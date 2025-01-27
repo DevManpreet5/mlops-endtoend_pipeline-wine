@@ -34,7 +34,7 @@ class configmanager:
             features_to_scale=config["features_to_scale"],
         )
     
-    def get_data_transform_config(self):
+    def get_data_training_config(self):
         config = self.config["model_training"]
         params=self.params["model_training"]
         return Modeltraining(
