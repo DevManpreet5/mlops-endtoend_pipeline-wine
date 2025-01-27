@@ -2,4 +2,22 @@
     "r2_score": 0.9490806223479491,
     "mae": 0.027777777777777776,
     "mse": 0.027777777777777776,
-    "confusion_matrix": 
+    "confusion_matrix": [
+        [
+            14,
+            0,
+            0
+        ],
+        [
+            0,
+            14,
+            0
+        ],
+        [
+            0,
+            1,
+            7
+        ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           1       1.00      1.00      1.00        14\n           2       0.93      1.00      0.97        14\n           3       1.00      0.88      0.93         8\n\n    accuracy                           0.97        36\n   macro avg       0.98      0.96      0.97        36\nweighted avg       0.97      0.97      0.97        36\n"
+}
