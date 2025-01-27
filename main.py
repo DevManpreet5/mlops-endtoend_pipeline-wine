@@ -15,6 +15,11 @@ if __name__ == "__main__":
 
 
     print('started training')
-    pipeline2 = trainingpiepline()
-    pipeline2.run()
+    pipeline3 = trainingpiepline()
+    pipeline3.run()
     print('end of traning')
+
+    print('started testing')
+    pipeline4 = testingpipeline()
+    pipeline4.run()
+    print('end of testing')

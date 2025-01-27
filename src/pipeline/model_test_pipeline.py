@@ -6,6 +6,6 @@ class testingpipeline:
         self.config_manager = configmanager()
 
     def run(self):
-        config = self.config_manager.get_data_training_config()
+        config = self.config_manager.get_data_evaluating()
         data_ingestion = Modeltestingcomponent(config)
         data_ingestion.run()

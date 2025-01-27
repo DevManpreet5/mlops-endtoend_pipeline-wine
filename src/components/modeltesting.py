@@ -3,7 +3,7 @@ import mlflow
 import os
 from dotenv import load_dotenv
 import json
-import pickle
+import joblib
 import pandas as pd
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score , classification_report , confusion_matrix
 
@@ -33,10 +33,10 @@ class Modeltestingcomponent:
       
             print("testing started")
             model_path=os.path.join(self.config.model_path,self.config.model_name)
-            best_model=pickle.load(open(model_path,'rb'))
+            best_model = joblib.load(model_path)
             y_pred=best_model.predict(X)
             r2score=r2_score(y_pred,y)
-            mlflow.log_metric("r2_score",r2_score)
+            mlflow.log_metric("r2_score",r2score)
             mae=mean_absolute_error(y_pred,y)
             mse=mean_squared_error(y_pred,y)
             mlflow.log_metric("mae",mae)
