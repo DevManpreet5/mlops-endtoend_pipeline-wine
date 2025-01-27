@@ -27,6 +27,12 @@
 7. Update the pipeline
 8. Update the main.py
 
+## Remaining Workflow
+
+1. **Data Validation**: Ensuring the integrity and correctness of the data before further processing.
+2. **Add Airflow for ETL**: Integrating **Apache Airflow** to manage and schedule ETL workflows.
+3. **Github Actions**: Automating the CI/CD pipeline with **Github Actions** for testing, building, and deploying the models.
+
 ## if face import module error
 
 1. Verify PYTHONPATH
