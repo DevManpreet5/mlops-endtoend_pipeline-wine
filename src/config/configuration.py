@@ -1,8 +1,6 @@
 import yaml
 from src.entity.config_entity import Ingestionclassconfig , TransformationConfig ,  Modeltraining , Modelevaluating
-from dotenv import load_dotenv
-import os
-load_dotenv()
+
 
 class configmanager:
     def __init__(self,config_path='config.yaml',param_path='params.yaml'):
@@ -62,10 +60,7 @@ class configmanager:
             model_path=config["model_path"],
             model_name=config["model_name"],
             metrics_file=config["metrics_file"],
-            tracking_uri=config["tracking_uri"],
-            mlflow_tracking_uri = os.getenv("MLFLOW_TRACKING_URI"),
-            mlflow_tracking_username = os.getenv("MLFLOW_TRACKING_USERNAME")
-            mlflow_tracking_password= os.getenv("MLFLOW_TRACKING_PASSWORD")
+            tracking_uri=config["tracking_uri"]
 
 
         )
