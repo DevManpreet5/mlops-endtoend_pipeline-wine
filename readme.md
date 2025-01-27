@@ -1,10 +1,13 @@
 # End to End Data Science Project
+
 ## Important Links
 
 - **[MLflow Tracking](https://dagshub.com/DevManpreet5/mlops-endtoend_pipeline-wine.mlflow/)**: Model tracking and evaluation tool.
 - **[Dagshub Repository](https://dagshub.com/DevManpreet5/mlops-endtoend_pipeline-wine)**: Main project repository for collaboration and code.
+- **[Streamlit Prediction App](https://devmanpreet5-mlops-endtoend-pipeline-wine-predict-app-dvtdzg.streamlit.app/)**: Hosted app for making predictions on wine data.
 
 ---
+
 ### Workflows--ML Pipeline
 
 1. Data Ingestion
@@ -37,7 +40,6 @@
 
 3. python3 src/config/configuration.py
 
-
 # Environment Setup
 
 Before running the project, ensure you have the following environment variables set in your `.env` file:
@@ -46,3 +48,4 @@ Before running the project, ensure you have the following environment variables 
 MLFLOW_TRACKING_USERNAME="DevManpreet5"
 MLFLOW_TRACKING_PASSWORD=""
 
+```
