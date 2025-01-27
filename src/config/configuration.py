@@ -50,7 +50,6 @@ class configmanager:
             learning_rate=params["learning_rate"],
             loss=params["loss"],
             n_estimators=params["n_estimators"],
-            metrics_file= config["metrics_file"],
             hyperparameter_file= config["hyperparameter_file"]
         )
 

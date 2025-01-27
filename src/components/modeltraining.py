@@ -38,20 +38,9 @@ class ModelTrainingcomponent:
         best_model = grid_search.best_estimator_
         y_pred = best_model.predict(X_test)
 
-        mae = mean_absolute_error(y_test, y_pred)
-        mse = mean_squared_error(y_test, y_pred)
-        rmse = mse ** 0.5
-        r2 = r2_score(y_test, y_pred)
-
-        metrics = {
-            "Mean Absolute Error": mae,
-            "Mean Squared Error": mse,
-            "Root Mean Squared Error": rmse,
-            "R^2 Score": r2
-        }
+       
         os.makedirs(self.config.model_path,exist_ok=True)
-        metrics_save_path = os.path.join(self.config.model_path, self.config.metrics_file)
-        pd.DataFrame([metrics]).to_json(metrics_save_path, orient="records", indent=4)
+        
 
         hyperparameterpath=os.path.join(self.config.model_path,self.config.hyperparameter_file)
         pd.DataFrame([grid_search.best_params_]).to_json(hyperparameterpath,orient='records',indent=4)
