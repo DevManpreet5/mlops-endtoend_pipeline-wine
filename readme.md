@@ -40,19 +40,16 @@
 
    ```plaintext
    python3 -c "import sys; print(sys.path)"
-
    ```
 
 2. If the root directory (.../mlops_wine_end2end_pipeline) is not listed, explicitly set it:
 
    ```plaintext
    export PYTHONPATH=$(pwd)
-
    ```
 
 3. ```plaintext
    python3 src/config/configuration.py
-
    ```
 
 # Environment Setup
