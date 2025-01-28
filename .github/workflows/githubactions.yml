@@ -1,0 +1,47 @@
+name: CI/CD Workflow for wine
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-workflows:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+  container-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: login to dockerhub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD}}
+
+      #step6- build
+      - name: build the container
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/wine_endtoend:latest .
+
+      #step7- push to dockerhub
+      - name: push to dockerhub
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/wine_endtoend:latest:latest
