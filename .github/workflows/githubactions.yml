@@ -44,4 +44,4 @@ jobs:
 
       #step7- push to dockerhub
       - name: push to dockerhub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/wine_endtoend:latest:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/wine_endtoend:latest
